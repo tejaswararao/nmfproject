@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Founders</title>
+    <style>
+        .container-fluid{
+            width: 100%;
+        }    
+        body{
+            background-color: whitesmoke;
+        }
+        .navbar{
+            padding:4rem,3rem;
+            top:0;
+            min-height: 8vh;
+            background-color:white;
+        }
+        nav img:hover{
+            transform:scale(1.1);
+        }
+        .navbar-toggler{
+            background:red;
+            border:none;
+            padding:10px;
+            outline:none;
+        }
+        .navbar-toggler span{
+            display: block;
+            width:20px;
+            border:1px;
+            height:2px;
+            background:white;
+        }
+        .navbar-toggler span+span{
+            margin-top:4px;
+            width:15px;
+            margin-left:2px;
+        }
+        .navbar-toggler span+span+span{  
+            width:7px;
+            margin-left:2px;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link{
+            font-size:30px;
+            position:relative;
+            padding:2rem 1.2rem;
+            color:black;
+        }
+        #home{   
+            color:black;
+            font-size: 30px;
+        }
+        #home:hover{
+            color:red;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link:hover{
+            color:red;
+        }
+        button{
+            transition-duration: 5s;
+            margin-left: 15px;
+            }
+        button:hover{       
+            transform: scale(1.2);   
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid" >      <!---container1 start-->
+    <div class="row">               <!-----row1 start-->
+        <div class="col-md-12">         <!----col1 start-->
+        <nav class="navbar navbar-expand-lg nav-menu fixed-top" >
+            {% load static %}
+            <img src="{% static 'images\logo.png' %}" style="height:70px;">
+            <h5 style="color:purple;margin-left:5px;">NIRMALA  MOHAN FOUNDATION</h5>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span ></span>
+            <span ></span>
+            <span ></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a id='home' class="nav-link" href="home" >
+                        Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="founders">Founders</a>
+                        <a class="dropdown-item" href="theme">Vision and Mission</a>
+                        <a class="dropdown-item" href="developers">Developers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Activities
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Health_Awareness">Health Awareness</a>
+                        <a class="dropdown-item" href="Education">Education</a>
+                        <a class="dropdown-item" href="Menstrual_Hygiene">Menstrual hygiene</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="home" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Events
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Photos</a>
+                            <a class="dropdown-item" href="#">Videos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="login">Login</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                <button class="btn  btn-sg" style="background-color:yellow;"><a href="index" style="color: red; text-decoration: none;">DONATE</a></button>
+                </ul>
+            </div>
+        </nav>      
+        </div> <!--col-md-12end -->
+    </div> <!--#row1 end-->
+</div>  <!--container1-->
+
+<div class="container-fluid">
+    <div class="row" style="height:150px;">
+    </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-1">
+            <img src="{% static 'images/founder1_img.jpeg' %}" style="height:350px;border:2px solid black;border-radius:10px;width:100%">
+        </div>
+        <div class="col-md-6 ">
+            <P style="font-size:20px; font-family:'bitter',serif;line-height:35px;text-align:justify; color: black;margin-left:50px;">
+                Our dad served the society till his last breath, he was very actively involved in all the social activities and played the 
+                role of Lions Club District Governor. We learned many things from our father who is a role model for many people, as it is said
+                every dad is the role model and hero for their kids.<br>
+                Our mother Smt NIRMALA, a Carnatic classical singer, very active in social activities also served as the president for Lioness 
+                club of Kamareddy.
+            </P>
+        </div>
+    </div>
+
+    <div class="row" style="height:50px;"></div>
+        <div class="row">
+            <div class="col-md-4 offset-md-1 ">
+                <P style="font-size:20px;margin-top: 50px; font-family:'bitter',serif;line-height:35px;text-align:justify; color: black;">
+                    Kalpana Panatula, the eldest one, plays a major role in guiding and supporting all the events. She cares and encourages
+                    her brothers to do more social activities and serve the society.
+                </P>
+            </div>
+            <div class="col-md-5 ">
+                <img src="{% static 'images/founders_img.png' %}" style="height:350px;margin-left:50px;border:2px solid black;border-radius:10px;width:100%;">
+            </div>
+        </div>
+
+        <div class="row" style="height:50px;"></div>
+        <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <img src="{% static 'images/founders_img.png' %}" style="height:350px;border:2px solid black;border-radius:10px;width:100%">
+            </div>
+            <div class="col-md-6 ">
+                <P style="font-size:20px;margin-left:50px;margin-top: 50px;; font-family:'bitter',serif;line-height:35px;text-align:justify; color: black;">
+                    Shastry Ravikanth, who is the elder one among the three brothers looks after the family business and actively involves in many 
+                    social activities and is always ready to help the people whenever needed.
+                </P>
+            </div>
+        </div>
+
+        <div class="row" style="height:50px;"></div>
+        <div class="row">
+            <div class="col-md-4 offset-md-1 ">
+                <P style="font-size:20px;margin-top: 50px; font-family:'bitter',serif;line-height:35px;text-align:justify; color: black;">
+                    Kalpana Panatula, the eldest one, plays a major role in guiding and supporting all the events. She cares and encourages
+                    her brothers to do more social activities and serve the society.
+                </P>
+            </div>
+            <div class="col-md-5">
+                <img src="{% static 'images/founders_img.png' %}" style="height:350px;margin-left:50px;border:2px solid black;border-radius:10px;">
+            </div>
+        </div>
+
+        <div class="row" style="height:50px;"></div>
+        <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <img src="{% static 'images/founder_img.jpg' %}" style="height:350px;border:2px solid black;border-radius:10px;width:100%;">
+            </div>
+            <div class="col-md-6">
+                <P style="font-size:20px;margin-top: 50px;margin-left:50px; font-family:'bitter',serif;line-height:35px;text-align:justify; color: black;">
+                    Dr Srikanth Shastry, the youngest one among the three brothers, completed MBBS and MD in Pathology, took initiation in starting
+                    this foundation. Being a medical professional and doctor, he is concerned about educating people and create health awareness in the society
+                </P>
+            </div>
+        </div>
+        <div class="row" style="height:50px;"></div>
+</div>
+
+<footer>
+    <div class="container-fluid">
+    <div class="row" style="height:50px;"></div>
+    <div class="row" style="background-color:grey;color:white;">
+        <div class=" col-md-3 offset-md-1">
+            <h3 style="margin-top:30px;margin-left:10px;"><i class="bi bi-building"></i> Registered Address</h3>
+            <p style="margin-left:20px;">Nirmala Mohan Foundation,<br>
+                H.No: 1-5-1055/87/125,<br>    
+                HMT Officers colony,Street No:9<br>Old Alwal,Secunderabad – 500010,<br>Telangana,India.
+            </p> 
+        </div>
+        <div class="col-md-3 ">
+            <h3 style="margin-top:30px;margin-left:30px;"><i class="bi bi-telephone"></i> CONTACT</h3>
+            <p><i class="bi bi-envelope"></i> Email: admin@nmf.org.in<br>                
+                <i class="bi bi-telephone"></i> Phone: 9908002593/7396266969
+            </p> 
+        </div>
+        <div class="col-md-3">
+            <h3 style="margin-top:30px; margin-left:50px;"><i class="bi bi-geo-alt-fill"></i> LOCATION</h3>
+            <div class="map-wrapper">
+                <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15220.131311041308!2d78.490809!3d17.5059463!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeffa5d03976f540c!2sNirmala%20Mohan%20Foundation!5e0!3m2!1sen!2sin!4v1645941338163!5m2!1sen!2sin" width="100%;" height="150px;" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<div class="container-fluid">
+    <div class="row" style="color:black;background-color:burlywood">
+       <div class="col-md-7 offset-md-5">
+        <p style="font-size:20px;">@2020 copyrights reserved<p>
+    </div> 
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>{{title}}</title>  
+    <style>
+    body{
+        background-color: whitesmoke;
+    }
+    .navbar{
+        padding:4rem,3rem;
+        top:0;
+        min-height: 8vh;
+        background-color:white;
+    }
+    nav img:hover{
+        transform:scale(1.1);
+    }
+    .navbar-toggler{
+        background:red;
+        border:none;
+        padding:10px;
+        outline:none;
+    }
+    .navbar-toggler span{
+        display: block;
+        width:20px;
+        border:1px;
+        height:2px;
+        background:white;
+    }
+    .navbar-toggler span+span{
+        margin-top:4px;
+        width:15px;
+        margin-left:2px;
+    }
+    .navbar-toggler span+span+span{  
+        width:7px;
+        margin-left:2px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        font-size:30px;
+        position:relative;
+        padding:2rem 1.2rem;
+        color:black;
+    }
+    #home{   
+        color:black;
+        font-size: 30px;
+    }
+    #home:hover{
+        color:red;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link:hover{
+        color:red;
+    }
+    button{
+        transition-duration: 5s;
+        margin-left: 15px;
+        }
+    button:hover{       
+        transform: scale(1.2);   
+    }
+    .health_img1 img{  
+        margin-top:50px;
+        margin-left:30px;
+        height:300px;
+        width:90%;
+        border:2px solid black;
+        border-radius:10px; 
+        transition-duration:5s ;    
+     }
+     .health_img2 img{  
+        margin-top:50px;
+        margin-left:30px;
+        height:300px;
+        width:90%;
+        border:2px solid black;
+        border-radius:10px;   
+        transition-duration:3s ;
+     }
+     .health_img1 img:hover{
+         transform: scale(1.1);
+     }
+     .health_img2 img:hover{
+         transform: scale(1.1);
+     }
+    </style>    
+</head>
+<body>
+    
+<div class="container-fluid" >      <!---container1 start-->
+    <div class="row">               <!-----row1 start-->
+    <div class="col-md-12">         <!----col1 start-->
+    <nav class="navbar navbar-expand-lg nav-menu fixed-top" >
+        {% load static %}
+        <img src="{% static 'images\logo.png' %}" style="height:70px;">
+        <h5 style="color:purple;margin-left:5px;">NIRMALA  MOHAN FOUNDATION</h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span ></span>
+        <span ></span>
+        <span ></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a id='home' class="nav-link" href="home" >
+                    Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="founders">Founders</a>
+                    <a class="dropdown-item" href="theme">Vision and Mission</a>
+                    <a class="dropdown-item" href="developers">Developers</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Activities
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Health_Awareness">Health Awareness</a>
+                    <a class="dropdown-item" href="#">Education</a>
+                    <a class="dropdown-item" href="Menstrual_Hygiene">Menstrual hygiene</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="home" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Events
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Photos</a>
+                        <a class="dropdown-item" href="#">Videos</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="login">Login</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+            <button class="btn  btn-sg" style="background-color:yellow;"><a href="index" style="color: red; text-decoration: none;">DONATE</a></button>
+            </ul>
+        </div>
+    </nav>      
+</div> <!--col-md-12end -->
+</div> <!--row1 end-->
+</div>  <!--container1 end-->            
+<div class="container-fluid">
+    <div class="row" style="height:100px;"></div>
+    <div class="row">
+        <div class="health_img1 col-md-4 ">
+            <img src="{% static 'images/health_img1.jpg' %}">
+        </div>
+        <div class=" health_img2 col-md-4">
+            <img src="{% static 'images/health_img2.jpeg' %}">
+        </div>
+        <div class=" health_img2 col-md-4">
+            <img src="{% static 'images/slide1_img.jpeg' %}">
+        </div>
+    </div>
+    <div class="row">
+       <h3 style="color:lightcoral;border-bottom: 2px solid blue;width:10%;margin-left: 50px;margin-top: 40px;"> Description</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+        <p style="font-size:20px;margin-left: 30px; font-family:'bitter',serif;line-height:35px;text-align:justify; color: black;">
+            I strongly believe that sound health of people is vital for a strong and prosperous nation. Better health is fundamental to 
+            human well-being and happiness. Healthy population lives longer and are more productive thereby contributing for nation building 
+            and economic progress. Health awareness plays a key role in our approach to improving access to healthcare. <br>We intend to empower 
+            communities, medical professionals and patients with appropriate tools, information and skills. This will help them make high quality 
+            information and decisions on prevention, diagnosis, treatment, care and support.My main purpose and intent of starting this foundation 
+            is to create awareness on major health issues in females <strong>with prime focus on  Breast cancer and Cervical cancer </strong> by conducting routine 
+            screening tests like Mammogram and Pap smear tests in Kamareddy District of Telangana State, India. Awareness of the different testing 
+            options means that, more people will gain access to screening and the death rates from these conditions can be prevented. 
+            Cancer awareness can also lead to people making healthier lifestyle choices. Regular screening camps help pinpoint cancer in people 
+            who show no symptoms. Being proactive about screening gives you the best odds for beating cancer when tumours are small and have not 
+            spread to other regions of the body.
+            Breast cancer is the most common cancer among women in India, and most of them present at advanced stage. Although early detection is
+            the only way to reduce morbidity and mortality, people have a very low awareness about breast cancer signs and symptoms and available
+            screening practices.<br>By means of our foundation we will also conduct screening camps for cervical cancer which is a routine basic 
+            investigation for all females in reproductive age, known  as Pap  smear test. Pap smear test serves a best screening test to detect
+            cervical cancer at an early stage. Majority of the people living in districts and rural places have no idea about Pap smear test or 
+            why it is done. With the help of our medical team we want to educate female population about Pap smear test and its significance in 
+            protecting themselves from cervical cancers. <strong>Other health events like Eye camps, dental camps and other regular routine health checkups
+             will also be conducted </strong>from our foundation and accordingly medical advice and guidance will be provided.
+        </p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container-fluid">
+    <div class="row" style="height:50px;"></div>
+    <div class="row" style="background-color:grey;color:white;">
+        <div class=" col-md-3 offset-md-1">
+            <h3 style="margin-top:30px;margin-left:10px;"><i class="bi bi-building"></i> Registered Address</h3>
+            <p style="margin-left:20px;">Nirmala Mohan Foundation,<br>
+                H.No: 1-5-1055/87/125,<br>    
+                HMT Officers colony,Street No:9<br>Old Alwal,Secunderabad – 500010,<br>Telangana,India.
+            </p> 
+        </div>
+        <div class="col-md-3 ">
+            <h3 style="margin-top:30px;margin-left:30px;"><i class="bi bi-telephone"></i> CONTACT</h3>
+            <p><i class="bi bi-envelope"></i> Email: admin@nmf.org.in<br>                
+                <i class="bi bi-telephone"></i> Phone: 9908002593/7396266969
+            </p>  
+        </div>
+        <div class="col-md-3">
+            <h3 style="margin-top:30px; margin-left:50px;"><i class="bi bi-geo-alt-fill"></i> LOCATION</h3>
+            <div class="map-wrapper">
+                <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15220.131311041308!2d78.490809!3d17.5059463!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeffa5d03976f540c!2sNirmala%20Mohan%20Foundation!5e0!3m2!1sen!2sin!4v1645941338163!5m2!1sen!2sin"  height="150px;" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<div class="container-fluid">
+    <div class="row" style="color:black;background-color:burlywood">
+       <div class="col-md-8 offset-md-4">
+        <p style="font-size:20px;">@2020 copyrights reserved<p></p>
+    </div> 
+    </div>
+</div>
+</body>
+</html>

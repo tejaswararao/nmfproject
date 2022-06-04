@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <title>Developers</title>
+</head>
+<style>
+    body{
+        background-color: gray;
+    }
+    .navbar{
+        padding:4rem,3rem;
+        top:0;
+        min-height: 8vh;
+        background-color:white;
+    }
+    nav img:hover{
+        transform:scale(1.1);
+    }
+    .navbar-toggler{
+        background:red;
+        border:none;
+        padding:10px;
+        outline:none;
+    }
+    .navbar-toggler span{
+        display: block;
+        width:20px;
+        border:1px;
+        height:2px;
+        background:white;
+    }
+    .navbar-toggler span+span{
+        margin-top:4px;
+        width:15px;
+        margin-left:2px;
+    }
+    .navbar-toggler span+span+span{  
+        width:7px;
+        margin-left:2px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        font-size:30px;
+        position:relative;
+        padding:2rem 1.2rem;
+        color:black;
+    }
+    #home{   
+        color:black;
+        font-size: 30px;
+    }
+    #home:hover{
+        color:red;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link:hover{
+        color:red;
+    }
+    p button a{
+        transition-duration: 5s;
+        margin-left: 15px;
+        }
+    p button a:hover{       
+        transform: scale(1.5);   
+    }
+</style>
+<body>
+    <div class="container-fluid" >      <!---container1 start-->
+        <div class="row">               <!-----row1 start-->
+        <div class="col-md-12">         <!----col1 start-->
+        <nav class="navbar navbar-expand-lg nav-menu fixed-top" >
+            {% load static %}
+            <img src="{% static 'images\logo.png' %}" style="height:70px;">
+            <h5 style="color:purple;margin-left:5px;">NIRMALA  MOHAN FOUNDATION</h5>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span ></span>
+            <span ></span>
+            <span ></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a id='home' class="nav-link" href="home" >
+                        Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="founders">Founders</a>
+                        <a class="dropdown-item" href="theme">Vision and Mission</a>
+                        <a class="dropdown-item" href="developers">Developers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Activities
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Health_Awareness">Health Awareness</a>
+                        <a class="dropdown-item" href="Education">Education</a>
+                        <a class="dropdown-item" href="Menstrual_Hygiene">Menstrual hygiene</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="home" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Events
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Photos</a>
+                            <a class="dropdown-item" href="#">Videos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="login">Login</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                <button class="btn  btn-sg" style="background-color:yellow;"><a href="index" style="color: red; text-decoration: none;">DONATE</a></button>
+                </ul>
+            </div>
+        </nav>      
+</body>
+</html>
