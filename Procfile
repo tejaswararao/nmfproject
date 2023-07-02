@@ -1,1 +1,1 @@
-web: gunicorn nmf.wsgi --log-file -
+Web: gunicorn nmf.wsgi --log-file -
