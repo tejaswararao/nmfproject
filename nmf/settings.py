@@ -23,7 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=*qkom8%v63-mo(@0&75x8z8lgr^%%w&+uj78($5l^dk5jyovn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
 
 ALLOWED_HOSTS = [
     '127.0.0.1','nmfproject.herokuapp.com'
@@ -119,11 +120,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/' 
+STATIC_URL = '/static/' 
+
+# MEDIA_URL = '/event_images/'
+
+MEDIA_URL = "/media/"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+ ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR,"media/")
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STRIPE_PUBLIC_KEY = 'pk_test_51L1j6WSD39NnnskOL0yPbpU2rSHVsJq5oPRPUJh4a63rDDgEfLFNsMkawW32ezoemR98YtYaKhFz0QWjJ71t3diz00DPrAbklq'
-STRIPE_PRIVATE_KEY = 'sk_test_51L1j6WSD39NnnskOWIHgWJo9el8AuRadaYJwfEzZL3M4eqa9ND5xn9DUEIdYVzE9iKf1j0sszod09Hj3gIJkzPnP00WwvPUkf3'
+
+
 
 
 # Default primary key field type

@@ -1,0 +1,149 @@
+.container-fluid{
+    width: 100%;
+} 
+html{
+    scroll-behavior: smooth;
+}   
+body{
+    background-color: whitesmoke;
+}
+.navbar{
+    padding:4rem,3rem;
+    top:0;
+    min-height: 8vh;
+    background-color:white;
+}
+nav img:hover{
+    transform:scale(1.1);
+}
+.navbar-toggler{
+    background:red;
+    border:none;
+    padding:10px;
+    outline:none;
+}
+.navbar-toggler span{
+    display: block;
+    width:20px;
+    border:1px;
+    height:2px;
+    background:white;
+}
+.navbar-toggler span+span{
+    margin-top:4px;
+    width:15px;
+    margin-left:2px;
+}
+.navbar-toggler span+span+span{  
+    width:7px;
+    margin-left:2px;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    font-size:30px;
+    position:relative;
+    padding:2rem 1.2rem;
+    color:black;
+}
+#home{   
+    color:black;
+    font-size: 30px;
+}
+#home:hover{
+    color:red;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    color:red;
+}
+
+button{
+    transition-duration: 5s;
+    margin-left: 15px;
+    }
+button:hover{       
+    transform: scale(1.2);   
+}
+
+/*                                 footer                                          */
+
+.map-wrapper{
+    max-width: 400px;
+}
+.googlemap{
+    width: 100%;
+}
+.center{
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    border: 4px solid white;
+    margin-top: 300px;
+    text-align: center;
+}
+
+/*                               home                                             */
+
+p button a{
+    transition-duration: 5s;
+    margin-left: 15px;
+    }
+p button a:hover{       
+    transform: scale(1.5);   
+}
+
+.nmf_home{
+   
+    height: 400px;
+}
+.nmf_home img{
+    border-radius: 10px;
+    border:2px solid black;
+    margin-top: 20px;
+    margin-left: 30px;
+    height:360px;
+    width:90%;
+    transition-duration: 5s;
+
+}
+.nmf_home img:hover{
+    transform: scale(1.1); 
+}
+
+#carouselExampleCaptions{
+    margin-top:10px;
+}
+
+.a{
+    color: pink;
+    font-size: 50px;
+}
+.div14 li{
+    font-size:20px;
+    color:black;
+}
+
+ /*                                             health:edu:me                         */
+
+ .nmf_img1 img{  
+    margin-top:50px;
+    margin-left:30px;
+    height:300px;
+    width:90%;
+    border:2px solid black;
+    border-radius:10px; 
+    transition-duration:5s ;    
+ }
+ .nmf_img2 img{  
+    margin-top:50px;
+    margin-left:30px;
+    height:300px;
+    width:90%;
+    border:2px solid black;
+    border-radius:10px;   
+    transition-duration:3s ;
+ }
+ .nmf_img1 img:hover{
+     transform: scale(1.1);
+ }
+ .nmf_img2 img:hover{
+     transform: scale(1.1);
+ }

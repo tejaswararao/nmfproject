@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Eventinfo_edit</title>
+    <style>
+       
+    body{
+      background-color: lightgreen;
+    }
+    </style>
+</head>
+<body><br><br>
+    <form method="POST" action="{% url 'eventinfo_update' %}">
+        {% csrf_token %}
+
+        <div class="container" >
+
+            <label>Event Id</label><br>
+            <input type="text" name="id" value={{event_info.id}} readonly="readonly">
+            <br><br>
+
+            <label>Event Name</label><br>
+            <input type="text" name="events" value="{{event_info.events.EventName}}" >
+            <br><br>
+
+            <label>Venue</label><br>
+            <input type="text" name="venue" value="{{event_info.venue}}"  >
+            <br><br>
+
+            <label>address</label><br>
+            <input type="text" name="address" value= "{{event_info.address}}">
+            <br><br> 
+
+            <label>Time</label><br>
+            <input type="time" name="time" value= "{{event_info.time}}">
+            <br><br> 
+
+            <label>description</label><br>
+            <input type="text" name="description" value= "{{event_info.description}}">
+            <br><br> 
+
+            <button type="submit">Update</button><br><br>
+        
+        </div>
+
+    </form>
+</body>
+</html>

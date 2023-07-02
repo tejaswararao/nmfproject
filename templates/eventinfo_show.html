@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eventinfo_show</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    h1{
+      text-align: center;
+      font-style: italic;
+      font-size: 80px;
+      font-family: 'Times New Roman', Times, serif;
+      color: red;
+    }
+    body{
+      background-color: whitesmoke;
+
+    }
+  
+    table{
+      border-radius: 5px;
+    }
+    table th{
+      text-align: center;
+      font-size: 30px;
+      color: red;
+      font-style: italic;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: black;
+      
+    }
+    table td{
+      background-color:aquamarine;
+      color:black;
+    }
+    table td{
+      text-align: center;
+    }
+  </style>
+</head>
+<body><br>
+    <h1>Eventinfo_Show Page</h1> <br>
+    <table border="5px" align="center" width="80%">
+    <tr>
+      <th>Events</th>
+      <th>Venue</th>
+      <th>Address</th>
+      <th>Time</th>
+      <th>Descriptin</th>
+      <th>Action</th>
+    </tr>
+    {% for rec in event_info %}
+    <tr>
+      <td> {{rec.events.EventName}} </td>
+      <td> {{rec.venue}} </td>
+      <td> {{rec.address}} </td>
+      <td> {{rec.time}} </td>
+      <td> {{rec.description}} </td>
+      <td>
+        <a href="eventinfo_edit/{{rec.id}}">Edit</a> |
+        <a href="eventinfo_delete/{{rec.id}}">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
