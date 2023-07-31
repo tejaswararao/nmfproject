@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Images_show</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    
+    h1{
+      text-align: center;
+      color: red;
+    }
+    body{
+      background-color:blanchedalmond;
+    }
+  </style>
+</head>
+<body>
+  {% load static %}
+  <br>
+    <h1>Images_Show Page</h1> <br>
+    <table border="5px" align="center" width="50%" style="background-color:white;" >
+
+      <tr style="color: blue; font-style: italic; font-size: larger;">
+        <th style="text-align:center;">Events</th>
+        <th style="text-align:center;  width: 150px;">Images</th>
+        <th style="text-align:center;">Date_Time</th>
+        <th style="text-align:center;">Action</th>
+      </tr>
+
+      {% for rec in images %}
+        <tr>
+          <td style="text-align:center;"> {{rec.events.EventName}} </td>
+
+          <td >                
+            <img src="{{rec.image.url}}" style="text-align:center; width: 150px; height: fit-content;" >
+          </td>
+
+          <td style="text-align:center;"> {{rec.date_time}} </td>
+          
+
+          <td style="text-align:center;">
+            <a href="images_edit/{{rec.id}}">Edit</a> |
+            <a href="images_delete/{{rec.id}}">Delete</a>
+          </td>
+
+        </tr>
+      {% endfor %}
+      
+    </table>
+
+    
+</body>
+</html>

@@ -1,48 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>EventInsert</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <style>
-    body{
-      background-color: aqua;
-    }
-    form{
-      text-align: center;
-      border: 5px solid black;
-      background-color:antiquewhite;
-      border-radius: 15px;
-      font-size: 30px;
-      color:red;
-    }   
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventinsert</title>
+ 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        body{
+            /* background-image: url(C:\Users\TEJU\OneDrive\Desktop\wallpaper.jpeg); 
+            background-repeat: no-repeat ;
+            background-size: 100% 100%; */
+            background-color:#363945;
+        }
+        form{
+            margin-top: 150px;
+            background-color: black;
+            border-radius: 15px;
+            /* padding-bottom: 15px;
+            clip-path: 
+            polygon(0% 0%,
+                100% 0%,
+                100% calc(100% - 30px),
+                0% 100%
+                ); */
+            /* background-color:black; */
+            /* border-radius: 10px; */
+            
+            /* border: 5px solid Yellow; */
+        }
+        label{
+            color:magenta;
+        }
+        input:invalid{
+            animation: shake 300ms;
+        }
+        @keyframes shake{
+            25% {transform: translate(4px) ;}
+            50% {transform: translate(-4px) ;}
+            75% {transform: translate(4px) ;}
+        }
+    </style>
 </head>
-<body><br><br><br>
-
-  <div class="container">
-    <form method="POST" action="eventsave"> <br>
-      {% csrf_token %}
-      
-      <label >Event Name</label>
-      <input type="name" name="EventName" value="" placeholder="Enter Event Name"> <br><br>                                       
-      
-      <label>Event Date</label>
-      <input type="date" name="EventDate" value="" placeholder="Enter Event Date"><br><br>
-
-      <label >Event Year</label>
-      <input type="year" name="EventYear" value="" placeholder="Enter Event Year"> <br><br>
-      
-      <label>
-      <button type="submit">Submit</button></label><br><br>
-
-      <a href="event_info">event_info</a>
-
-    </form>
-  </div>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <form class="form col-md-6 offset-md-3" method="POST" action="eventsave">
+                {% csrf_token %}
+                <h3>
+                <div class="form-row">
+                    <div class="form-group col-md-7 offset-md-2" >
+                        <label for="inputEventname">Event Name</label>
+                        <input type="text" class="form-control" id="inputEventname" name="EventName" value="" placeholder="Enter Event Name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4 offset-md-2">
+                        <label for="EventDate">Event Date</label>
+                        <input type="Date" class="form-control" id="inputEventDate4" name="EventDate" value="" placeholder="Event Date">
+                    </div>
+                    <div class="form-group col-md-3 offset-md-0" >
+                        <label for="inputEventname">Event Year</label>
+                        <input type="int" pattern="[0-9]*" class="form-control" id="inputEventYear" name="EventYear" value="" placeholder="Enter Event Year">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="button col-md-7 offset-md-2">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                    </div>
+                </div>
+                </h3>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

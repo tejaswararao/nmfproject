@@ -9,11 +9,39 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
     <title>{{title}}</title>  
-  
+
+    <style>
+
+    .health_img1 img{  
+        margin-top:50px;
+        margin-left:30px;
+        height:300px;
+        width:90%;
+        border:2px solid black;
+        border-radius:10px; 
+        transition-duration:5s ;    
+     }
+     .health_img2 img{  
+        margin-top:50px;
+        margin-left:30px;
+        height:300px;
+        width:90%;
+        border:2px solid black;
+        border-radius:10px;   
+        transition-duration:3s ;
+     }
+     .health_img1 img:hover{
+         transform: scale(1.1);
+     }
+     .health_img2 img:hover{
+         transform: scale(1.1);
+     }
+
+    </style>    
 </head>
 <body>
 
-<!--                                                NAVBAR                                                                      -->
+<!--                                                NAVBAR                                                                              -->
 <div class="container-fluid" >      
     <div class="row">               
     <div class="col-md-12">         
@@ -76,13 +104,13 @@
 <div class="container-fluid">
     <div class="row" style="height:100px;"></div>
     <div class="row">
-        <div class="nmf_img1 col-md-4 ">
+        <div class="health_img1 col-md-4 ">
             <img src="{% static 'images/health_img1.jpg' %}">
         </div>
-        <div class="nmf_img2 col-md-4">
+        <div class=" health_img2 col-md-4">
             <img src="{% static 'images/health_img2.jpeg' %}">
         </div>
-        <div class="nmf_img2 col-md-4">
+        <div class=" health_img2 col-md-4">
             <img src="{% static 'images/slide1_img.jpeg' %}">
         </div>
     </div>

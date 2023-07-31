@@ -11,6 +11,83 @@
     
     <title>{{title}}</title>
 </head>
+<style>   
+    
+    p button a{
+        transition-duration: 5s;
+        margin-left: 15px;
+        }
+    p button a:hover{       
+        transform: scale(1.5);   
+    }
+
+    .education{  
+        height: 400px;
+    }
+    .education img{
+        border-radius: 10px;
+        border:2px solid black;
+        margin-top: 20px;
+        margin-left: 50px;
+        height:360px;
+        width:90%;
+        transition-duration: 5s;
+    }
+    .education img:hover{
+        transform: scale(1.1); 
+    }
+
+    .health{
+       
+        height: 400px;
+    }
+    .health img{
+        border-radius: 10px;
+        border:2px solid black;
+        margin-top: 20px;
+        margin-left: 30px;
+        height:360px;
+        width:90%;
+        transition-duration: 5s;
+
+    }
+    .health img:hover{
+        transform: scale(1.1); 
+    }
+
+    .girl_rel{
+       
+        height: 400px;
+    }
+    .girl_rel img{
+        border-radius: 10px;
+        border:2px solid black;
+        margin-top: 20px;
+        margin-left: 50px;
+        height:360px;
+        width:90%;
+        transition-duration: 5s;      
+    }
+    .girl_rel img:hover{
+        transform: scale(1.1); 
+    }
+
+    #carouselExampleCaptions{
+        margin-top:10px;
+    }
+
+    
+    .a{
+        color: pink;
+        font-size: 50px;
+    }
+    .div14 li{
+        font-size:20px;
+        color:black;
+    }
+
+    </style>
+</head>
 <body>
 <div class="container-fluid" >      
     <div class="row">               
@@ -139,7 +216,7 @@
 <!--                                                EDUCATION DATA                                                            -->
 
     <div class="row" style="margin-right:20px;margin-left:20px;">  
-        <div class="nmf_home col-md-6">
+        <div class="education col-md-6">
             <img src="{% static 'images\edu_img1.jpg' %}" >             
         </div>
         <div class="education_text col-md-6"  >
@@ -175,7 +252,7 @@
             </p>
             <button class="btn btn-secondary btn-sg" style="margin-left: 50px;"><a href="Health_Awareness" style="color: lightpink; text-decoration: none;">Read More</a></button>
         </div>
-        <div class="nmf_home col-md-6 ">
+        <div class="health col-md-6 ">
             <img src="{% static 'images\health_img.jpg' %}" >             
         </div>     
     </div>                                       
@@ -188,7 +265,7 @@
 <!--                                                HYGIENE DATA                                                               -->
 
     <div class="row" style="margin-right:20px;margin-left:20px;border-radius: 5px;">                                       <!--hygiene row 6th start-->
-        <div class="nmf_home col-md-6 ">
+        <div class="girl_rel col-md-6 ">
             <img src="{% static 'images\girl_rel_img1.jpeg' %}" >             
         </div>
         <div class="girl_rel_text col-md-6" >

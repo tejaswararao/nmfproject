@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,5 +38,81 @@
         </div>
 
     </form>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images_edit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        body{
+            background-color:#363945;
+        }
+        form{
+            margin-top: 150px;
+            background-color: black;
+            border-radius: 15px;
+
+        }
+        label{
+            color:magenta;
+        }
+        input:invalid{
+            animation: shake 300ms;
+        }
+        @keyframes shake{
+            25% {transform: translate(4px) ;}
+            50% {transform: translate(-4px) ;}
+            75% {transform: translate(4px) ;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <form class="form col-md-6 offset-md-3" method="POST" action="{% url 'images_update' %}">
+                {% csrf_token %}
+                <h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-7 offset-md-2" >
+                            <label for="inputEventname">Event Id</label>
+                            <input type="text" class="form-control" name="name" value={{images.id}} readonly="readonly">
+                        </div>
+                    </div>
+                <div class="form-row">
+                    <div class="form-group col-md-7 offset-md-2" >
+                        <label for="inputEventname">Events</label>
+                        <input type="text" class="form-control" id="inputEventname" name="events" value="{{images.events.EventName}}"  placeholder="Enter Event Name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4 offset-md-2">
+                        <label for="EventDate">insert image</label>
+                        <input type="file" class="form-control" id="inputEventDate" name="image" value="{{images.image}} " >
+                    </div>
+                    <div class="form-group col-md-3 offset-md-0" >
+                        <label for="inputEventname">Date_time</label>
+                        <input type="date" class="form-control" id="inputEventYear" name="date_time" value= "{{images.date_time}}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="button col-md-7 offset-md-2">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
+                    </div>
+                </div>
+                </h3>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

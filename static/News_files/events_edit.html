@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Events_edit</title>
+</head>
+<body><br><br>
+    <form method="POST" action="{% url 'events_update' %}">
+        {% csrf_token %}
+        <div class="container" >
+        <label>Event Id</label><br>
+        <input type="text" name="id" value={{events.id}} readonly="readonly">
+        <br><br>
+        <label>Event Name</label><br>
+        <input type="text" name="EventName" value="{{events.EventName}}" >
+        <br><br>
+        <label>Event Date</label><br>
+        <input type="date" name="EventDate" value="{{events.EventDate}}"  >
+        <br><br>
+        <label>Event Year</label><br>
+        <input type="year" name="EventYear" value= "{{events.EventYear}}">
+        <br><br> 
+        <button type="submit">Update</button><br><br>
+        </div>
+
+    </form>
+</body>
+</html>

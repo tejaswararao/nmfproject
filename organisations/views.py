@@ -90,12 +90,12 @@ def events_update(request):
         ei.EventDate = request.POST['EventDate']
         ei.EventYear = request.POST['EventYear']
         ei.save()
-        return HttpResponse('Events table updated')
+        return redirect(events_show)
 
 def events_delete(request,id):
     objects = models.events.objects.get(id=id)
     objects.delete()
-    return HttpResponse('record deleted successfully')
+    return redirect(events_show)
 
 #......................   2 events info .............
 
@@ -151,12 +151,12 @@ def eventinfo_update(request):
         e2.time = request.POST['time']
         e2.description = request.POST['description']
         e2.save() 
-        return HttpResponse('Events_info table updated')
+        return redirect(eventinfo_show)
 
 def eventinfo_delete(request,id):
     objects = models.event_info.objects.get(id=id)
     objects.delete()
-    return HttpResponse('record deleted successfully')
+    return redirect(eventinfo_show)
 
 # ........................... 3 images .............................
 
